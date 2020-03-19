@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  data_inicial: 2020-03-19
+  data_final: 2020-03-19
+  peso_atual: 1.5
+  peso_ideal: 1.5
+  altura: 1.5
+
+two:
+  data_inicial: 2020-03-19
+  data_final: 2020-03-19
+  peso_atual: 1.5
+  peso_ideal: 1.5
+  altura: 1.5

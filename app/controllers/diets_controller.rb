@@ -15,7 +15,8 @@ class DietsController < ApplicationController
 
   # GET /diets/new
   def new
-    @diet = Diet.new
+    @diet = current_user.build_diet
+    
   end
 
   # GET /diets/1/edit
@@ -25,8 +26,8 @@ class DietsController < ApplicationController
   # POST /diets
   # POST /diets.json
   def create
-    @diet = Diet.new(diet_params)
-
+    @diet = current_user.build_diet(diet_params)
+    
     respond_to do |format|
       if @diet.save
         format.html { redirect_to @diet, notice: 'Diet was successfully created.' }

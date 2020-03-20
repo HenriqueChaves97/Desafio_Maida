@@ -3,3 +3,11 @@
 <%= render 'form', weighing: @weighing %>
 
 <%= link_to 'Back', weighings_path %>
+
+<script>
+    window.onload = initPage;
+    function initPage(){
+        var d = document.querySelector("input[id='weighing_peso_atual']")
+        d.type = 'text'
+    }
+</script> 

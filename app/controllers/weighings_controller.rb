@@ -14,7 +14,7 @@ class WeighingsController < ApplicationController
 
   # GET /weighings/new
   def new
-    @weighing = Weighing.new
+    @weighing = current_user.weighing.build
   end
 
   # GET /weighings/1/edit
@@ -24,7 +24,7 @@ class WeighingsController < ApplicationController
   # POST /weighings
   # POST /weighings.json
   def create
-    @weighing = Weighing.new(weighing_params)
+    @weighing = current_user.weighing.build(weighing_params)
 
     respond_to do |format|
       if @weighing.save

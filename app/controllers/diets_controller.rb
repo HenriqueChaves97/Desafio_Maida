@@ -2,18 +2,14 @@ class DietsController < ApplicationController
   before_action :set_diet, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
 
-  # GET /diets
-  # GET /diets.json
   def index
+    #Faz query por id de usuario em diet
     @diets = Diet.where(:user_id => current_user)
   end
 
-  # GET /diets/1
-  # GET /diets/1.json
   def show
   end
 
-  # GET /diets/new
   def new
     #verifica se existe tabela onde o user_id é igual ao usuario logado
     if Diet.exists?(:user_id => current_user)
@@ -25,12 +21,9 @@ class DietsController < ApplicationController
     end
   end
 
-  # GET /diets/1/edit
   def edit
   end
 
-  # POST /diets
-  # POST /diets.json
   def create
     @diet = current_user.build_diet(diet_params)
     
@@ -45,8 +38,6 @@ class DietsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /diets/1
-  # PATCH/PUT /diets/1.json
   def update
     respond_to do |format|
       if @diet.update(diet_params)
@@ -59,8 +50,6 @@ class DietsController < ApplicationController
     end
   end
 
-  # DELETE /diets/1
-  # DELETE /diets/1.json
   def destroy
     @diet.destroy
     respond_to do |format|

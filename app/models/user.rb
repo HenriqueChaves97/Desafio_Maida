@@ -5,5 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
            
   has_one :diet, :dependent => :destroy
-  has_many :weighing
+  has_many :weighing, :dependent => :destroy
 end

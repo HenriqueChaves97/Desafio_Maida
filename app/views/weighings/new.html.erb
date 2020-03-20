@@ -1,9 +1,4 @@
 <h1>New Weighing</h1>
-
-<%= render 'form', weighing: @weighing %>
-
-<%= link_to 'Back', weighings_path %>
-
 <script>
     window.onload = initPage;
     function initPage(){
@@ -11,3 +6,8 @@
         d.type = 'text'
     }
 </script> 
+<%= render 'form', weighing: @weighing %>
+
+<%= link_to 'Back', weighings_path %>
+
+

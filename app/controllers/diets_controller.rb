@@ -15,7 +15,12 @@ class DietsController < ApplicationController
 
   # GET /diets/new
   def new
-    @diet = current_user.build_diet
+    last_diet = Diet.last
+    if last_diet.nil?
+      @diet = current_user.build_diet
+    else
+      redirect_to '/diets'
+    end
   end
 
   # GET /diets/1/edit

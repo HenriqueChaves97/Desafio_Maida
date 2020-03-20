@@ -14,7 +14,7 @@ class WeighingsController < ApplicationController
 
   # GET /weighings/new
   def new
-    @weighing = current_user.weighing.build
+    @weighing = current_user.weighing.build    
   end
 
   # GET /weighings/1/edit

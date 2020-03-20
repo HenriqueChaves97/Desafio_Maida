@@ -16,7 +16,6 @@ class DietsController < ApplicationController
   # GET /diets/new
   def new
     @diet = current_user.build_diet
-    
   end
 
   # GET /diets/1/edit

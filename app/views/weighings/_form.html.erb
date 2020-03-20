@@ -1,0 +1,27 @@
+<%= form_with(model: weighing, local: true) do |form| %>
+  <% if weighing.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(weighing.errors.count, "error") %> prohibited this weighing from being saved:</h2>
+
+      <ul>
+      <% weighing.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :data %>
+    <%= form.date_select :data %>
+  </div>
+
+  <div class="field">
+    <%= form.label :peso_atual %>
+    <%= form.number_field :peso_atual %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

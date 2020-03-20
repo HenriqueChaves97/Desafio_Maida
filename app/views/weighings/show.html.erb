@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Data:</strong>
+  <%= @weighing.data %>
+</p>
+
+<p>
+  <strong>Peso atual:</strong>
+  <%= @weighing.peso_atual %>
+</p>
+
+<%= link_to 'Edit', edit_weighing_path(@weighing) %> |
+<%= link_to 'Back', weighings_path %>

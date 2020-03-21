@@ -14,7 +14,9 @@ class DietsController < ApplicationController
     #verifica se existe tabela onde o user_id é igual ao usuario logado
     if Diet.exists?(:user_id => current_user)
       #A view new é redirecionada para diets se existir o id do usuario na tabela Dit
-      redirect_to '/diets'
+      respond_to do |format|
+        format.html { redirect_to '/diets', notice: 'Sua dieta já está cadastrada!' }
+      end
     else
       #Se o id de usuario não existir na tabela, então o formulario é carregado
       @diet = current_user.build_diet

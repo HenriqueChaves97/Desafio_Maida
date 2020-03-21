@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tipo_refeicao: MyString
+  horario: 2020-03-20 15:38:56
+  conteudo: MyText
+  user: one
+  diet: one
+
+two:
+  tipo_refeicao: MyString
+  horario: 2020-03-20 15:38:56
+  conteudo: MyText
+  user: two
+  diet: two

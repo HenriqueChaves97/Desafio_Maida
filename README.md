@@ -1,3 +1,4 @@
 # Gerenciamento de dieta
 
-Projeto de desafio proposto pela empresa Maida health
+Desafio proposto pela empresa Maida.Health.
+O desafio Gerenciamento de dietas tem como objetivo testar capacidades técnicas utilizando o framework Rails da linguagem Ruby
